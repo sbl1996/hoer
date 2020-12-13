@@ -218,9 +218,9 @@ def Act(type='default'):
     if type in ['default', 'def']:
         return Act(DEFAULTS['activation'])
     if type == 'relu':
-        return ops.ReLU()
+        return nn.ReLU()
     elif type == 'sigmoid':
-        return ops.Sigmoid()
+        return nn.Sigmoid()
     elif type == 'hswish':
         return nn.HSwish()
     elif type == 'leaky_relu':
