@@ -40,6 +40,8 @@ class PreActResBlock(Sequential):
         ]
         if dropout:
             layers.insert(5, Dropout(dropout))
+        for l in layers:
+            print(l, isinstance(l, nn.Cell))
         super().__init__(layers)
 
     def construct(self, x):
