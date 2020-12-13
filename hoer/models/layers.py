@@ -264,4 +264,10 @@ class GlobalAvgPool(nn.Cell):
         return ops.reduce_mean(x, (2, 3), keep_dims=self.keep_dims)
 
 
-Identity = nn.Identity
+class Identity(nn.Cell):
+
+    def __init__(self):
+        super().__init__()
+
+    def construct(self, x):
+        return x
