@@ -121,7 +121,7 @@ def calc_same_padding(kernel_size, dilation):
     dh, dw = dilation
     ph = (kh + (kh - 1) * (dh - 1) - 1) // 2
     pw = (kw + (kw - 1) * (dw - 1) - 1) // 2
-    padding = (ph, pw)
+    padding = (ph, ph, pw, pw)
     return padding
 
 
