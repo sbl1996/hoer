@@ -28,7 +28,7 @@ class PreActDownBlock(nn.Cell):
         return x + self.shortcut(identity)
 
 
-class PreActResBlock(nn.Cell):
+class PreActResBlock(Sequential):
     def __init__(self, in_channels, out_channels, dropout):
         layers = [
             Norm(in_channels),
