@@ -198,8 +198,7 @@ def Norm(channels, type='default', affine=None, track_running_stats=None, zero_i
             use_batch_statistics = None
         else:
             use_batch_statistics = True
-        if zero_init:
-            gamma_init = 'zeros' if zero_init else 'ones'
+        gamma_init = 'zeros' if zero_init else 'ones'
         if cfg['sync']:
             bn = nn.GlobalBatchNorm(
                 num_features=channels, momentum=cfg['momentum'], eps=cfg['eps'], affine=affine, gamma_init=gamma_init,
