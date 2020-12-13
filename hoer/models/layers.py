@@ -168,7 +168,7 @@ def Conv2d(in_channels: int,
     else:
         use_bias = bias
 
-    conv = nn.Conv2d(in_channels, out_channels, kernel_size=kernel_size, strides=stride,
+    conv = nn.Conv2d(in_channels, out_channels, kernel_size=kernel_size, stride=stride,
                   pad_mode='pad', dilation=dilation, has_bias=use_bias, group=groups,
                   weight_init=weight_init, bias_init=bias_init)
 
